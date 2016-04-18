@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="03C-uE-9OL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hj0-A3-6M3">
+            <objects>
+                <navigationController id="03C-uE-9OL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ghY-Vo-FHB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kwf-kj-4xS" kind="relationship" relationship="rootViewController" id="tie-mu-SzJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUX-8p-bMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1355" y="397"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="zWc-Rd-foM">
+            <objects>
+                <tableViewController title="Main" id="kwf-kj-4xS" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="984-pc-jgz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="Afo-XF-Ho4">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="N6r-0w-hWf">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N6r-0w-hWf" id="kbf-W8-bch">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="调用ImagePicker录像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQU-ny-J2c">
+                                                    <rect key="frame" x="16" y="14" width="162" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="push" id="iY3-tB-CZu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="lKV-wj-Ily">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lKV-wj-Ily" id="5gy-Ly-6pb">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AVCapture录像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-rK-yQr">
+                                                    <rect key="frame" x="16" y="11" width="97" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lYf-Tu-Bnk" kind="modal" modalPresentationStyle="fullScreen" id="GTK-o2-sgE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="kwf-kj-4xS" id="eHa-eo-q6z"/>
+                            <outlet property="delegate" destination="kwf-kj-4xS" id="pRb-Kw-vH0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Main" id="1O8-KS-Xsf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nln-VV-7sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-937" y="397"/>
+        </scene>
+        <!--ImagePickerVideoController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ImagePickerVideoController" customClass="ImagePickerVideoController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-IQ-CeD">
+                                <rect key="frame" x="105" y="108" width="110" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="3i3-Ke-3uH"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ido-Z8-TgF"/>
+                                </constraints>
+                                <state key="normal" title="开始录制"/>
+                                <connections>
+                                    <action selector="recordBegin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibG-3p-bDw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8e-b2-jKP">
+                                <rect key="frame" x="105" y="169" width="110" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="dgL-WP-gHf"/>
+                                    <constraint firstAttribute="height" constant="30" id="gZk-ep-5VY"/>
+                                </constraints>
+                                <state key="normal" title="播放"/>
+                                <connections>
+                                    <action selector="palyVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fk1-Kr-Uj3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i7K-IQ-CeD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Na-bR-Amu"/>
+                            <constraint firstItem="a8e-b2-jKP" firstAttribute="top" secondItem="i7K-IQ-CeD" secondAttribute="bottom" constant="31" id="M9Y-7h-aCr"/>
+                            <constraint firstItem="a8e-b2-jKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qbc-zs-cTD"/>
+                            <constraint firstItem="i7K-IQ-CeD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="cb4-WI-lAY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="be8-kD-yQd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1172" y="1148"/>
+        </scene>
+        <!--AVCapture录制视频-->
+        <scene sceneID="dTC-gJ-ln2">
+            <objects>
+                <viewController id="lYf-Tu-Bnk" userLabel="AVCapture录制视频" customClass="AVCaptureController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x1t-N7-7LV"/>
+                        <viewControllerLayoutGuide type="bottom" id="7pc-Xh-8Dc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SOj-qb-gdF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sA1-cg-QLp" userLabel="返回/前后摄像头切换">
+                                <rect key="frame" x="0.0" y="469" width="320" height="99"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZJ-Mw-HiQ">
+                                        <rect key="frame" x="44" y="32" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="OwT-WO-wrJ"/>
+                                            <constraint firstAttribute="width" constant="36" id="XYz-5k-5M6"/>
+                                        </constraints>
+                                        <state key="normal" image="move_prevew">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="preview:" destination="lYf-Tu-Bnk" eventType="touchUpInside" id="L7k-2p-vso"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQT-on-Vme">
+                                        <rect key="frame" x="240" y="32" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="Xy2-27-2Gs"/>
+                                            <constraint firstAttribute="height" constant="36" id="bJd-iP-dvV"/>
+                                        </constraints>
+                                        <state key="normal" image="move_send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="send:" destination="lYf-Tu-Bnk" eventType="touchUpInside" id="Xoj-Ne-zSF"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kcg-N1-VDt">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="RkN-p3-kZz"/>
+                                        </constraints>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-wr-cvK">
+                                        <rect key="frame" x="127" y="16" width="67" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="67" id="Tm3-Ju-e1x"/>
+                                            <constraint firstAttribute="width" constant="67" id="Z73-Bn-eX9"/>
+                                        </constraints>
+                                        <state key="normal" image="move_record"/>
+                                        <state key="selected" image="move_finish"/>
+                                        <connections>
+                                            <action selector="video:" destination="lYf-Tu-Bnk" eventType="touchUpInside" id="MmU-xK-azj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BQT-on-Vme" secondAttribute="trailing" constant="44" id="0m8-Ga-rAQ"/>
+                                    <constraint firstItem="5ZJ-Mw-HiQ" firstAttribute="leading" secondItem="sA1-cg-QLp" secondAttribute="leading" constant="44" id="7RJ-Qs-XLf"/>
+                                    <constraint firstItem="5ZJ-Mw-HiQ" firstAttribute="centerY" secondItem="sA1-cg-QLp" secondAttribute="centerY" constant="0.5" id="9SY-BJ-WFh"/>
+                                    <constraint firstItem="kcg-N1-VDt" firstAttribute="leading" secondItem="sA1-cg-QLp" secondAttribute="leading" id="Nnd-QR-qaJ"/>
+                                    <constraint firstItem="kcg-N1-VDt" firstAttribute="top" secondItem="sA1-cg-QLp" secondAttribute="top" id="Ogr-nX-416"/>
+                                    <constraint firstItem="BQT-on-Vme" firstAttribute="centerY" secondItem="sA1-cg-QLp" secondAttribute="centerY" id="Ym1-Sg-Boq"/>
+                                    <constraint firstAttribute="height" constant="99" id="as5-eq-Nrr"/>
+                                    <constraint firstItem="VRL-wr-cvK" firstAttribute="centerY" secondItem="sA1-cg-QLp" secondAttribute="centerY" id="hjd-Ds-BEY"/>
+                                    <constraint firstAttribute="trailing" secondItem="kcg-N1-VDt" secondAttribute="trailing" id="rhE-du-dGX"/>
+                                    <constraint firstItem="VRL-wr-cvK" firstAttribute="centerX" secondItem="sA1-cg-QLp" secondAttribute="centerX" id="zZf-hW-lVR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2L-xp-R2B" userLabel="预览/播放/发送View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEC-5E-r6C">
+                                        <rect key="frame" x="8" y="7" width="41" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="关闭">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="back:" destination="lYf-Tu-Bnk" eventType="touchUpInside" id="ThE-Qz-bhl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrE-gO-q74">
+                                        <rect key="frame" x="283" y="8" width="29" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="29" id="F6u-fX-ey3"/>
+                                            <constraint firstAttribute="height" constant="29" id="Z4T-wH-MBO"/>
+                                        </constraints>
+                                        <state key="normal" image="move_change"/>
+                                        <connections>
+                                            <action selector="changeCamera:" destination="lYf-Tu-Bnk" eventType="touchUpInside" id="njf-sw-TNn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="T6Q-qs-kRj"/>
+                                    <constraint firstAttribute="trailing" secondItem="jrE-gO-q74" secondAttribute="trailing" constant="8" id="qEg-Fb-rCZ"/>
+                                    <constraint firstItem="jrE-gO-q74" firstAttribute="centerY" secondItem="O2L-xp-R2B" secondAttribute="centerY" id="r9V-Uo-2jb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O2L-xp-R2B" firstAttribute="top" secondItem="x1t-N7-7LV" secondAttribute="bottom" id="1PY-S0-VDX"/>
+                            <constraint firstItem="7pc-Xh-8Dc" firstAttribute="top" secondItem="sA1-cg-QLp" secondAttribute="bottom" id="5S6-km-2hl"/>
+                            <constraint firstAttribute="trailing" secondItem="O2L-xp-R2B" secondAttribute="trailing" id="CYZ-MA-wq2"/>
+                            <constraint firstItem="sA1-cg-QLp" firstAttribute="leading" secondItem="SOj-qb-gdF" secondAttribute="leading" id="Pfl-9k-Get"/>
+                            <constraint firstItem="O2L-xp-R2B" firstAttribute="leading" secondItem="SOj-qb-gdF" secondAttribute="leading" id="mov-EP-SYa"/>
+                            <constraint firstAttribute="trailing" secondItem="sA1-cg-QLp" secondAttribute="trailing" id="wQO-tK-ieT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pZX-ED-rde"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="duration" destination="kcg-N1-VDt" id="rHt-V5-sNP"/>
+                        <outlet property="previewBtn" destination="5ZJ-Mw-HiQ" id="cJl-rg-LiP"/>
+                        <outlet property="sendBtn" destination="BQT-on-Vme" id="n8a-zo-YbX"/>
+                        <outlet property="videoBtn" destination="VRL-wr-cvK" id="VNT-KE-nf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tx0-hH-NrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-640" y="1148"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="move_change" width="29" height="29"/>
+        <image name="move_finish" width="67" height="67"/>
+        <image name="move_prevew" width="36" height="36"/>
+        <image name="move_record" width="67" height="67"/>
+        <image name="move_send" width="36" height="36"/>
+    </resources>
+</document>
